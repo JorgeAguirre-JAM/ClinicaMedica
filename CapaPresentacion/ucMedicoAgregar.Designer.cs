@@ -34,7 +34,8 @@
             label1 = new Label();
             label2 = new Label();
             panel_edicion = new Panel();
-            listBox1 = new ListBox();
+            label9 = new Label();
+            lib_archivos = new ListBox();
             label7 = new Label();
             tb_ruta = new TextBox();
             button1 = new Button();
@@ -49,6 +50,7 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
+            bt_cerrar = new Button();
             tlp_EdicionPa.SuspendLayout();
             panel_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -73,6 +75,7 @@
             // panel_header
             // 
             panel_header.BackColor = Color.FromArgb(36, 37, 60);
+            panel_header.Controls.Add(bt_cerrar);
             panel_header.Controls.Add(pictureBox1);
             panel_header.Controls.Add(label1);
             panel_header.Controls.Add(label2);
@@ -118,7 +121,8 @@
             // panel_edicion
             // 
             panel_edicion.BackColor = Color.FromArgb(248, 249, 255);
-            panel_edicion.Controls.Add(listBox1);
+            panel_edicion.Controls.Add(label9);
+            panel_edicion.Controls.Add(lib_archivos);
             panel_edicion.Controls.Add(label7);
             panel_edicion.Controls.Add(tb_ruta);
             panel_edicion.Controls.Add(button1);
@@ -140,15 +144,26 @@
             panel_edicion.TabIndex = 1;
             panel_edicion.Paint += panel_edicion_Paint;
             // 
-            // listBox1
+            // label9
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(23, 355);
-            listBox1.Margin = new Padding(3, 2, 3, 2);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(348, 79);
-            listBox1.TabIndex = 28;
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label9.ForeColor = Color.FromArgb(36, 37, 60);
+            label9.Location = new Point(127, 284);
+            label9.Name = "label9";
+            label9.Size = new Size(115, 19);
+            label9.TabIndex = 29;
+            label9.Text = "Agregar Cedula";
+            // 
+            // lib_archivos
+            // 
+            lib_archivos.FormattingEnabled = true;
+            lib_archivos.ItemHeight = 15;
+            lib_archivos.Location = new Point(23, 355);
+            lib_archivos.Margin = new Padding(3, 2, 3, 2);
+            lib_archivos.Name = "lib_archivos";
+            lib_archivos.Size = new Size(348, 79);
+            lib_archivos.TabIndex = 28;
             // 
             // label7
             // 
@@ -313,6 +328,21 @@
             label3.TabIndex = 0;
             label3.Text = "Nombre(s)";
             // 
+            // bt_cerrar
+            // 
+            bt_cerrar.BackColor = Color.FromArgb(52, 57, 91);
+            bt_cerrar.FlatAppearance.BorderSize = 0;
+            bt_cerrar.FlatStyle = FlatStyle.Flat;
+            bt_cerrar.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            bt_cerrar.ForeColor = Color.White;
+            bt_cerrar.ImageAlign = ContentAlignment.MiddleLeft;
+            bt_cerrar.Location = new Point(344, 7);
+            bt_cerrar.Name = "bt_cerrar";
+            bt_cerrar.Size = new Size(43, 31);
+            bt_cerrar.TabIndex = 30;
+            bt_cerrar.Text = "X";
+            bt_cerrar.UseVisualStyleBackColor = false;
+            // 
             // ucMedicoAgregar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -348,9 +378,11 @@
         private Label label5;
         private Label label4;
         private Label label3;
-        private ListBox listBox1;
+        private ListBox lib_archivos;
         private Label label7;
         private TextBox tb_ruta;
         private Button button1;
+        private Label label9;
+        private Button bt_cerrar;
     }
 }

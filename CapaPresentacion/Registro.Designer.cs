@@ -61,15 +61,14 @@
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
-            tableLayoutPanel1.Size = new Size(927, 827);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(811, 620);
             tableLayoutPanel1.TabIndex = 14;
             // 
             // panel1
@@ -82,10 +81,9 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label3);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(3, 4);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(364, 819);
+            panel1.Size = new Size(318, 614);
             panel1.TabIndex = 0;
             // 
             // label6
@@ -94,9 +92,9 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(235, 756);
+            label6.Location = new Point(206, 567);
             label6.Name = "label6";
-            label6.Size = new Size(116, 20);
+            label6.Size = new Size(94, 15);
             label6.TabIndex = 22;
             label6.Text = "by Alpha Code";
             // 
@@ -106,19 +104,18 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(162, 731);
+            label5.Location = new Point(142, 548);
             label5.Name = "label5";
-            label5.Size = new Size(191, 20);
+            label5.Size = new Size(158, 15);
             label5.TabIndex = 21;
             label5.Text = "Developed and Designed";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.SCCM;
-            pictureBox1.Location = new Point(97, 60);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(85, 45);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(178, 193);
+            pictureBox1.Size = new Size(156, 145);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 17;
             pictureBox1.TabStop = false;
@@ -127,9 +124,9 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(202, 431);
+            label4.Location = new Point(146, 328);
             label4.Name = "label4";
             label4.Size = new Size(154, 28);
             label4.TabIndex = 20;
@@ -139,9 +136,9 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(118, 388);
+            label2.Location = new Point(51, 295);
             label2.Name = "label2";
             label2.Size = new Size(249, 28);
             label2.TabIndex = 18;
@@ -151,9 +148,9 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(215, 348);
+            label3.Location = new Point(160, 267);
             label3.Name = "label3";
             label3.Size = new Size(140, 28);
             label3.TabIndex = 19;
@@ -172,10 +169,9 @@
             panel2.Controls.Add(tb_UsuarioRegistro);
             panel2.Controls.Add(tb_ContraseñaRegistro);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(373, 4);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(327, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(551, 819);
+            panel2.Size = new Size(481, 614);
             panel2.TabIndex = 1;
             // 
             // label9
@@ -183,9 +179,9 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 6.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.FromArgb(36, 37, 60);
-            label9.Location = new Point(249, 588);
+            label9.Location = new Point(218, 441);
             label9.Name = "label9";
-            label9.Size = new Size(68, 15);
+            label9.Size = new Size(51, 12);
             label9.TabIndex = 21;
             label9.Text = "O dirigete a";
             // 
@@ -194,11 +190,11 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(36, 37, 60);
-            label7.Location = new Point(26, 111);
+            label7.Location = new Point(23, 83);
             label7.Name = "label7";
-            label7.Size = new Size(185, 41);
+            label7.Size = new Size(144, 32);
             label7.TabIndex = 19;
-            label7.Text = "Registra tus";
+            label7.Text = "Registro de";
             // 
             // label8
             // 
@@ -206,18 +202,18 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(36, 37, 60);
-            label8.Location = new Point(25, 141);
+            label8.Location = new Point(22, 106);
             label8.Name = "label8";
-            label8.Size = new Size(302, 62);
+            label8.Size = new Size(280, 50);
             label8.TabIndex = 20;
-            label8.Text = "Credenciales";
+            label8.Text = "Nuevo Usuario";
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(235, 611);
+            linkLabel1.Location = new Point(206, 458);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(96, 20);
+            linkLabel1.Size = new Size(76, 15);
             linkLabel1.TabIndex = 18;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Iniciar Sesión";
@@ -230,10 +226,9 @@
             bt_Registrar.FlatStyle = FlatStyle.Popup;
             bt_Registrar.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             bt_Registrar.ForeColor = Color.White;
-            bt_Registrar.Location = new Point(198, 529);
-            bt_Registrar.Margin = new Padding(3, 4, 3, 4);
+            bt_Registrar.Location = new Point(173, 397);
             bt_Registrar.Name = "bt_Registrar";
-            bt_Registrar.Size = new Size(157, 52);
+            bt_Registrar.Size = new Size(137, 39);
             bt_Registrar.TabIndex = 17;
             bt_Registrar.Text = "Registrar";
             bt_Registrar.UseVisualStyleBackColor = false;
@@ -244,9 +239,9 @@
             lb_Usuario.AutoSize = true;
             lb_Usuario.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_Usuario.ForeColor = Color.FromArgb(36, 37, 60);
-            lb_Usuario.Location = new Point(25, 281);
+            lb_Usuario.Location = new Point(22, 211);
             lb_Usuario.Name = "lb_Usuario";
-            lb_Usuario.Size = new Size(81, 25);
+            lb_Usuario.Size = new Size(63, 20);
             lb_Usuario.TabIndex = 13;
             lb_Usuario.Text = "Usuario";
             // 
@@ -255,43 +250,41 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(36, 37, 60);
-            label1.Location = new Point(25, 407);
+            label1.Location = new Point(22, 305);
             label1.Name = "label1";
-            label1.Size = new Size(113, 25);
+            label1.Size = new Size(88, 20);
             label1.TabIndex = 14;
             label1.Text = "Contraseña";
             // 
             // tb_UsuarioRegistro
             // 
             tb_UsuarioRegistro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tb_UsuarioRegistro.BackColor = Color.FromArgb(217, 220, 255);
-            tb_UsuarioRegistro.BorderStyle = BorderStyle.None;
+            tb_UsuarioRegistro.BackColor = Color.White;
+            tb_UsuarioRegistro.BorderStyle = BorderStyle.FixedSingle;
             tb_UsuarioRegistro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tb_UsuarioRegistro.Location = new Point(31, 328);
-            tb_UsuarioRegistro.Margin = new Padding(3, 4, 3, 4);
+            tb_UsuarioRegistro.Location = new Point(27, 246);
             tb_UsuarioRegistro.Name = "tb_UsuarioRegistro";
-            tb_UsuarioRegistro.Size = new Size(491, 27);
+            tb_UsuarioRegistro.Size = new Size(429, 22);
             tb_UsuarioRegistro.TabIndex = 16;
             // 
             // tb_ContraseñaRegistro
             // 
             tb_ContraseñaRegistro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tb_ContraseñaRegistro.BackColor = Color.FromArgb(217, 220, 255);
-            tb_ContraseñaRegistro.BorderStyle = BorderStyle.None;
+            tb_ContraseñaRegistro.BackColor = Color.White;
+            tb_ContraseñaRegistro.BorderStyle = BorderStyle.FixedSingle;
             tb_ContraseñaRegistro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tb_ContraseñaRegistro.Location = new Point(31, 455);
-            tb_ContraseñaRegistro.Margin = new Padding(3, 4, 3, 4);
+            tb_ContraseñaRegistro.Location = new Point(27, 341);
             tb_ContraseñaRegistro.Name = "tb_ContraseñaRegistro";
-            tb_ContraseñaRegistro.Size = new Size(491, 27);
+            tb_ContraseñaRegistro.PasswordChar = '*';
+            tb_ContraseñaRegistro.Size = new Size(429, 22);
             tb_ContraseñaRegistro.TabIndex = 15;
             // 
             // Registro
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(927, 827);
+            ClientSize = new Size(811, 620);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Registro";
             Text = "Registro";
             tableLayoutPanel1.ResumeLayout(false);

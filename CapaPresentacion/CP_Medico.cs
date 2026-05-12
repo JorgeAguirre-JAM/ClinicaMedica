@@ -15,7 +15,7 @@ namespace CapaPresentacion
     public partial class CP_Medico : Form
     {
         private CL_Doctor objDoctorNegocio = new CL_Doctor();
-        
+
         public CP_Medico()
         {
             InitializeComponent();
@@ -247,8 +247,8 @@ namespace CapaPresentacion
                 ucEsp.RegistroGuardado += (s, args) =>
                 {
                     panel1.Width = 0;
-                                      
-                                      
+
+
                 };
             }
         }
@@ -303,7 +303,7 @@ namespace CapaPresentacion
                         if (exito)
                         {
                             MessageBox.Show("Médico y su agenda eliminados correctamente.", "Sistema");
-                            CargarDatos(); 
+                            CargarDatos();
                         }
                     }
                     catch (Exception ex)
@@ -331,5 +331,14 @@ namespace CapaPresentacion
             }
         }
 
+        private void bt_consultas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_nav_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

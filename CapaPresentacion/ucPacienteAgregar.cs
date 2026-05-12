@@ -7,7 +7,7 @@ namespace CapaPresentacion
 {
     public partial class ucPacienteAgregar : UserControl
     {
-     
+
         public event EventHandler RegistroGuardado;
 
         public ucPacienteAgregar()
@@ -16,7 +16,7 @@ namespace CapaPresentacion
             dtp_aggfechanac.Value = DateTime.Now;
         }
 
-        private void bt_aggguardar_Click_1(object sender, EventArgs e) 
+        private void bt_aggguardar_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(tb_aggnombre.Text) || string.IsNullOrWhiteSpace(tb_aggapellido.Text))
             {
@@ -29,13 +29,13 @@ namespace CapaPresentacion
 
                 CE_Paciente nuevoPaciente = new CE_Paciente
                 {
-                    IdPaciente = 0, 
+                    IdPaciente = 0,
                     Nombre = tb_aggnombre.Text.Trim(),
                     Apellidos = tb_aggapellido.Text.Trim(),
                     Telefono = tb_aggtelefono.Text.Trim(),
                     Direccion = tb_aggdireccion.Text.Trim(),
                     TipoSangre = cb_aggtipodangre.Text,
-                
+
                     FechNac = dtp_aggfechanac.Value.ToString("yyyy-MM-dd")
                 };
 
@@ -65,6 +65,11 @@ namespace CapaPresentacion
             tb_aggdireccion.Clear();
             cb_aggtipodangre.SelectedIndex = -1;
             dtp_aggfechanac.Value = DateTime.Now;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
