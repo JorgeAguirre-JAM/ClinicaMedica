@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CapaPresentacion
+{
+    public partial class Registro : Form
+    {
+        public Registro()
+        {
+            InitializeComponent();
+        }
+
+        private void bt_Registrar_Click(object sender, EventArgs e)
+        {
+            CP_Pacientes nuevaPantalla = new CP_Pacientes();
+            nuevaPantalla.Show();
+            this.Hide();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CP_Login nuevaPantalla = new CP_Login();
+            nuevaPantalla.Show();
+            this.Hide();
+        }
+
+    }
+}
