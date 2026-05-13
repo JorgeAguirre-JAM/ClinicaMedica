@@ -1,0 +1,127 @@
+CREATE DATABASE SistemaClinica;
+USE SistemaClinica;
+
+CREATE TABLE Paciente (
+    IdPaciente INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Apellidos VARCHAR(100) NOT NULL,
+    FechNac DATE NOT NULL,
+    Telefono VARCHAR(20),
+    Direccion VARCHAR(255),
+    TipoSangre VARCHAR(5)
+);
+
+CREATE TABLE Especialidad (
+    IdEspecialidad INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Descripcion VARCHAR(255)
+);
+
+CREATE TABLE Doctor (
+    IdDoctor INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Apellidos VARCHAR(100) NOT NULL,
+    Telefono VARCHAR(20),
+    IdEspecialidad INT,
+    NumeroColegiado VARCHAR(50) UNIQUE NOT NULL,
+    RutaDoctos VARCHAR(255),
+    FOREIGN KEY (IdEspecialidad) REFERENCES Especialidad(IdEspecialidad)
+);
+
+CREATE TABLE Turno (
+    IdTurno INT AUTO_INCREMENT PRIMARY KEY,
+    IdDoctor INT NOT NULL,
+    Dia VARCHAR(20) NOT NULL, -- Ej: 'Lunes', 'Martes' o una fecha específica
+    Horario VARCHAR(50) NOT NULL, -- Ej: '08:00 - 14:00'
+    Estado TINYINT NOT NULL DEFAULT 0, -- 0: Disponible, 1: Ocupado
+    FOREIGN KEY (IdDoctor) REFERENCES Doctor(IdDoctor)
+);
+
+CREATE TABLE Cita (
+    IdCita INT AUTO_INCREMENT PRIMARY KEY,
+    IdPaciente INT NOT NULL,
+    IdTurno INT NOT NULL,
+    Fecha DATE NOT NULL,
+    Motivo VARCHAR(255),
+    Estado TINYINT NOT NULL DEFAULT 0, -- 0: Por realizar, 1: Realizada, 2: Cancelada
+    FOREIGN KEY (IdPaciente) REFERENCES Paciente(IdPaciente),
+    FOREIGN KEY (IdTurno) REFERENCES Turno(IdTurno)
+);
+
+CREATE TABLE Consulta (
+    IdConsulta INT AUTO_INCREMENT PRIMARY KEY,
+    IdCita INT NOT NULL,
+    IdPaciente INT NOT NULL,
+    Fecha DATE NOT NULL,
+    Hora TIME NOT NULL,
+    Diagnostico TEXT,
+    Tratamiento TEXT,
+    Estudios TEXT,
+    RutaDoctos VARCHAR(255),
+    FOREIGN KEY (IdCita) REFERENCES Cita(IdCita),
+    FOREIGN KEY (IdPaciente) REFERENCES Paciente(IdPaciente)
+);
+
+CREATE TABLE ExpedienteMedico (
+    IdExpediente INT AUTO_INCREMENT PRIMARY KEY,
+    IdPaciente INT NOT NULL UNIQUE, -- UNIQUE asegura que sea relación 1 a 1
+    Sexo VARCHAR(20),
+    EstadoCivil VARCHAR(50),
+    Ocupacion VARCHAR(100),
+    LugarOrigen VARCHAR(100),
+    Religion VARCHAR(50),
+    NombreResponsable VARCHAR(150),
+    ContactoResponsable VARCHAR(50),
+    AntHeredofamiliares TEXT,
+    AntPatologicos TEXT,
+    AntNoPatologicos TEXT,
+    FechaApertura DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (IdPaciente) REFERENCES Paciente(IdPaciente)
+);
+
+CREATE TABLE SignosVitales (
+    IdSignosVitales INT AUTO_INCREMENT PRIMARY KEY,
+    IdConsulta INT NOT NULL,
+    Temperatura DECIMAL(4,2), -- Ej: 36.50
+    FrecuenciaCardiaca INT,
+    FrecuenciaRespiratoria INT,
+    PresionArterial VARCHAR(20), -- Ej: '120/80'
+    Peso DECIMAL(5,2), -- Ej: 75.50 (en kg)
+    Talla DECIMAL(4,2), -- Ej: 1.75 (en metros)
+    FechaHoraToma DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (IdConsulta) REFERENCES Consulta(IdConsulta)
+);
+
+CREATE TABLE Rol (
+    IdRol INT AUTO_INCREMENT PRIMARY KEY,
+    Descripcion VARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE Usuario (
+    IdUsr INT AUTO_INCREMENT PRIMARY KEY,
+    Usr VARCHAR(150) NOT NULL UNIQUE,
+    Contrasena VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE UsuarioRol (
+    IdUsr INT NOT NULL,
+    IdRol INT NOT NULL,
+    PRIMARY KEY (IdUsr, IdRol),
+    FOREIGN KEY (IdUsr) REFERENCES Usuario(IdUsr) ON DELETE CASCADE,
+    FOREIGN KEY (IdRol) REFERENCES Rol(IdRol) ON DELETE CASCADE
+);
+
+USE SistemaClinica;
+
+CREATE TABLE Permiso (
+    IdPermiso INT AUTO_INCREMENT PRIMARY KEY,
+    Permiso VARCHAR(150) NOT NULL UNIQUE
+);
+
+CREATE TABLE RolPermiso (
+    IdPermiso INT NOT NULL,
+    IdRol INT NOT NULL,
+    PRIMARY KEY (IdPermiso, IdRol),
+    FOREIGN KEY (IdPermiso) REFERENCES Permiso(IdPermiso) ON DELETE CASCADE,
+    FOREIGN KEY (IdRol) REFERENCES Rol(IdRol) ON DELETE CASCADE
+);
