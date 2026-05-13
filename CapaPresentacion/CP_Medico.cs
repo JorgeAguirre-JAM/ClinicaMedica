@@ -340,5 +340,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void tlp_busqueda_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

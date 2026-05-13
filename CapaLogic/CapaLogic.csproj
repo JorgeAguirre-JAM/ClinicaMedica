@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Tools.Windows" Version="33.1.47" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj" />
     <ProjectReference Include="..\CapaEntities\CapaEntities.csproj" />
   </ItemGroup>

@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tlp_General = new TableLayoutPanel();
             panel_logo = new Panel();
             pb_logo = new PictureBox();
             panel_nav = new Panel();
+            panel3 = new Panel();
+            bt_consultas = new Button();
+            panel2 = new Panel();
+            bt_citas = new Button();
             bt_config = new Button();
             bt_usuario = new Button();
             panel5 = new Panel();
@@ -51,24 +55,22 @@
             pictureBox2 = new PictureBox();
             txtBuscar = new TextBox();
             panel1 = new Panel();
-            panel2 = new Panel();
-            bt_citas = new Button();
-            panel3 = new Panel();
-            bt_consultas = new Button();
+            label2 = new Label();
             tlp_General.SuspendLayout();
             panel_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pb_logo).BeginInit();
             panel_nav.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
+            panel_header.SuspendLayout();
             tlp_busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMedico).BeginInit();
             tlp_busquedanav.SuspendLayout();
             panel_boton.SuspendLayout();
             panel_buscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // tlp_General
@@ -124,6 +126,59 @@
             panel_nav.Size = new Size(217, 565);
             panel_nav.TabIndex = 1;
             panel_nav.Paint += panel_nav_Paint;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(bt_consultas);
+            panel3.Location = new Point(20, 307);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(178, 63);
+            panel3.TabIndex = 5;
+            // 
+            // bt_consultas
+            // 
+            bt_consultas.BackColor = Color.FromArgb(52, 57, 91);
+            bt_consultas.Dock = DockStyle.Fill;
+            bt_consultas.FlatAppearance.BorderSize = 0;
+            bt_consultas.FlatStyle = FlatStyle.Flat;
+            bt_consultas.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            bt_consultas.ForeColor = Color.White;
+            bt_consultas.Image = Properties.Resources.consultasog;
+            bt_consultas.ImageAlign = ContentAlignment.MiddleLeft;
+            bt_consultas.Location = new Point(0, 0);
+            bt_consultas.Name = "bt_consultas";
+            bt_consultas.Padding = new Padding(25, 0, 0, 0);
+            bt_consultas.Size = new Size(178, 63);
+            bt_consultas.TabIndex = 0;
+            bt_consultas.Text = "    Consultas";
+            bt_consultas.UseVisualStyleBackColor = false;
+            bt_consultas.Click += bt_consultas_Click;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(bt_citas);
+            panel2.Location = new Point(20, 219);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(178, 63);
+            panel2.TabIndex = 2;
+            // 
+            // bt_citas
+            // 
+            bt_citas.BackColor = Color.FromArgb(52, 57, 91);
+            bt_citas.Dock = DockStyle.Fill;
+            bt_citas.FlatAppearance.BorderSize = 0;
+            bt_citas.FlatStyle = FlatStyle.Flat;
+            bt_citas.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            bt_citas.ForeColor = Color.White;
+            bt_citas.Image = Properties.Resources.citasog;
+            bt_citas.ImageAlign = ContentAlignment.MiddleLeft;
+            bt_citas.Location = new Point(0, 0);
+            bt_citas.Name = "bt_citas";
+            bt_citas.Padding = new Padding(25, 0, 0, 0);
+            bt_citas.Size = new Size(178, 63);
+            bt_citas.TabIndex = 0;
+            bt_citas.Text = "    Citas";
+            bt_citas.UseVisualStyleBackColor = false;
             // 
             // bt_config
             // 
@@ -209,6 +264,7 @@
             // 
             // panel_header
             // 
+            panel_header.Controls.Add(label2);
             panel_header.Dock = DockStyle.Fill;
             panel_header.Location = new Point(226, 3);
             panel_header.Name = "panel_header";
@@ -232,23 +288,24 @@
             tlp_busqueda.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tlp_busqueda.Size = new Size(1035, 565);
             tlp_busqueda.TabIndex = 5;
+            tlp_busqueda.Paint += tlp_busqueda_Paint;
             // 
             // dgvMedico
             // 
-            dataGridViewCellStyle11.BackColor = Color.FromArgb(224, 224, 224);
-            dgvMedico.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(224, 224, 224);
+            dgvMedico.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvMedico.BackgroundColor = Color.FromArgb(238, 239, 255);
             dgvMedico.BorderStyle = BorderStyle.None;
             dgvMedico.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvMedico.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            dgvMedico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvMedico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvMedico.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvMedico.Dock = DockStyle.Fill;
             dgvMedico.EnableHeadersVisualStyles = false;
@@ -370,58 +427,17 @@
             panel1.Size = new Size(9, 681);
             panel1.TabIndex = 5;
             // 
-            // panel2
+            // label2
             // 
-            panel2.Controls.Add(bt_citas);
-            panel2.Location = new Point(20, 219);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(178, 63);
-            panel2.TabIndex = 2;
-            // 
-            // bt_citas
-            // 
-            bt_citas.BackColor = Color.FromArgb(52, 57, 91);
-            bt_citas.Dock = DockStyle.Fill;
-            bt_citas.FlatAppearance.BorderSize = 0;
-            bt_citas.FlatStyle = FlatStyle.Flat;
-            bt_citas.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bt_citas.ForeColor = Color.White;
-            bt_citas.Image = Properties.Resources.citasog;
-            bt_citas.ImageAlign = ContentAlignment.MiddleLeft;
-            bt_citas.Location = new Point(0, 0);
-            bt_citas.Name = "bt_citas";
-            bt_citas.Padding = new Padding(25, 0, 0, 0);
-            bt_citas.Size = new Size(178, 63);
-            bt_citas.TabIndex = 0;
-            bt_citas.Text = "    Citas";
-            bt_citas.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(bt_consultas);
-            panel3.Location = new Point(20, 307);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(178, 63);
-            panel3.TabIndex = 5;
-            // 
-            // bt_consultas
-            // 
-            bt_consultas.BackColor = Color.FromArgb(52, 57, 91);
-            bt_consultas.Dock = DockStyle.Fill;
-            bt_consultas.FlatAppearance.BorderSize = 0;
-            bt_consultas.FlatStyle = FlatStyle.Flat;
-            bt_consultas.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bt_consultas.ForeColor = Color.White;
-            bt_consultas.Image = Properties.Resources.consultasog;
-            bt_consultas.ImageAlign = ContentAlignment.MiddleLeft;
-            bt_consultas.Location = new Point(0, 0);
-            bt_consultas.Name = "bt_consultas";
-            bt_consultas.Padding = new Padding(25, 0, 0, 0);
-            bt_consultas.Size = new Size(178, 63);
-            bt_consultas.TabIndex = 0;
-            bt_consultas.Text = "    Consultas";
-            bt_consultas.UseVisualStyleBackColor = false;
-            bt_consultas.Click += bt_consultas_Click;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(36, 37, 60);
+            label2.Location = new Point(10, 28);
+            label2.Name = "label2";
+            label2.Size = new Size(204, 45);
+            label2.TabIndex = 2;
+            label2.Text = "Especialidad";
             // 
             // CP_Medico
             // 
@@ -440,8 +456,12 @@
             panel_logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pb_logo).EndInit();
             panel_nav.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel4.ResumeLayout(false);
+            panel_header.ResumeLayout(false);
+            panel_header.PerformLayout();
             tlp_busqueda.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvMedico).EndInit();
             tlp_busquedanav.ResumeLayout(false);
@@ -449,8 +469,6 @@
             panel_buscador.ResumeLayout(false);
             panel_buscador.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -481,5 +499,6 @@
         private Button bt_consultas;
         private Panel panel2;
         private Button bt_citas;
+        private Label label2;
     }
 }

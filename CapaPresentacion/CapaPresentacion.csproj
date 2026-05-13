@@ -10,8 +10,6 @@
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
-    <PackageReference Include="Syncfusion.Grid.Windows" Version="33.1.47" />
-    <PackageReference Include="Syncfusion.Tools.Windows" Version="33.1.47" />
   </ItemGroup>
 
   <ItemGroup>

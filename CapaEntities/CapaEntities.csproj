@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Syncfusion.Tools.Windows" Version="33.1.47" />
-  </ItemGroup>
-
 </Project>

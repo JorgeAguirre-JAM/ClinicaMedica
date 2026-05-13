@@ -30,6 +30,7 @@
         {
             tlp_EdicionPa = new TableLayoutPanel();
             panel_header = new Panel();
+            bt_cerrar = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -50,7 +51,8 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            bt_cerrar = new Button();
+            textBox1 = new TextBox();
+            label10 = new Label();
             tlp_EdicionPa.SuspendLayout();
             panel_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -84,6 +86,21 @@
             panel_header.Name = "panel_header";
             panel_header.Size = new Size(394, 101);
             panel_header.TabIndex = 0;
+            // 
+            // bt_cerrar
+            // 
+            bt_cerrar.BackColor = Color.FromArgb(52, 57, 91);
+            bt_cerrar.FlatAppearance.BorderSize = 0;
+            bt_cerrar.FlatStyle = FlatStyle.Flat;
+            bt_cerrar.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            bt_cerrar.ForeColor = Color.White;
+            bt_cerrar.ImageAlign = ContentAlignment.MiddleLeft;
+            bt_cerrar.Location = new Point(344, 7);
+            bt_cerrar.Name = "bt_cerrar";
+            bt_cerrar.Size = new Size(43, 31);
+            bt_cerrar.TabIndex = 30;
+            bt_cerrar.Text = "X";
+            bt_cerrar.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -121,6 +138,9 @@
             // panel_edicion
             // 
             panel_edicion.BackColor = Color.FromArgb(248, 249, 255);
+            panel_edicion.BorderStyle = BorderStyle.FixedSingle;
+            panel_edicion.Controls.Add(textBox1);
+            panel_edicion.Controls.Add(label10);
             panel_edicion.Controls.Add(label9);
             panel_edicion.Controls.Add(lib_archivos);
             panel_edicion.Controls.Add(label7);
@@ -179,12 +199,12 @@
             // tb_ruta
             // 
             tb_ruta.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tb_ruta.BackColor = Color.FromArgb(217, 220, 255);
-            tb_ruta.BorderStyle = BorderStyle.None;
-            tb_ruta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tb_ruta.BackColor = Color.White;
+            tb_ruta.BorderStyle = BorderStyle.FixedSingle;
+            tb_ruta.Font = new Font("Segoe UI", 10F);
             tb_ruta.Location = new Point(83, 323);
             tb_ruta.Name = "tb_ruta";
-            tb_ruta.Size = new Size(233, 22);
+            tb_ruta.Size = new Size(231, 25);
             tb_ruta.TabIndex = 26;
             // 
             // button1
@@ -194,12 +214,11 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Image = Properties.Resources.subirog;
             button1.Location = new Point(335, 320);
             button1.Name = "button1";
             button1.Size = new Size(36, 27);
             button1.TabIndex = 25;
-            button1.Text = "...";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -211,7 +230,7 @@
             bt_ediguardar.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             bt_ediguardar.ForeColor = Color.White;
             bt_ediguardar.ImageAlign = ContentAlignment.MiddleLeft;
-            bt_ediguardar.Location = new Point(115, 494);
+            bt_ediguardar.Location = new Point(115, 480);
             bt_ediguardar.Name = "bt_ediguardar";
             bt_ediguardar.Size = new Size(162, 44);
             bt_ediguardar.TabIndex = 24;
@@ -221,56 +240,56 @@
             // 
             // cb_editipodangre
             // 
-            cb_editipodangre.BackColor = Color.FromArgb(217, 220, 255);
-            cb_editipodangre.FlatStyle = FlatStyle.Flat;
+            cb_editipodangre.BackColor = Color.White;
+            cb_editipodangre.Font = new Font("Segoe UI", 10F);
             cb_editipodangre.FormattingEnabled = true;
-            cb_editipodangre.Location = new Point(213, 145);
+            cb_editipodangre.Location = new Point(211, 146);
             cb_editipodangre.Name = "cb_editipodangre";
-            cb_editipodangre.Size = new Size(159, 23);
+            cb_editipodangre.Size = new Size(159, 25);
             cb_editipodangre.TabIndex = 21;
             // 
             // tb_edidireccion
             // 
             tb_edidireccion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tb_edidireccion.BackColor = Color.FromArgb(217, 220, 255);
-            tb_edidireccion.BorderStyle = BorderStyle.None;
-            tb_edidireccion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tb_edidireccion.BackColor = Color.White;
+            tb_edidireccion.BorderStyle = BorderStyle.FixedSingle;
+            tb_edidireccion.Font = new Font("Segoe UI", 10F);
             tb_edidireccion.Location = new Point(24, 237);
             tb_edidireccion.Name = "tb_edidireccion";
-            tb_edidireccion.Size = new Size(153, 22);
+            tb_edidireccion.Size = new Size(151, 25);
             tb_edidireccion.TabIndex = 20;
             // 
             // tb_editelefono
             // 
             tb_editelefono.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tb_editelefono.BackColor = Color.FromArgb(217, 220, 255);
-            tb_editelefono.BorderStyle = BorderStyle.None;
-            tb_editelefono.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tb_editelefono.BackColor = Color.White;
+            tb_editelefono.BorderStyle = BorderStyle.FixedSingle;
+            tb_editelefono.Font = new Font("Segoe UI", 10F);
             tb_editelefono.Location = new Point(24, 146);
             tb_editelefono.Name = "tb_editelefono";
-            tb_editelefono.Size = new Size(153, 22);
+            tb_editelefono.Size = new Size(151, 25);
             tb_editelefono.TabIndex = 19;
             // 
             // tb_ediapellido
             // 
             tb_ediapellido.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tb_ediapellido.BackColor = Color.FromArgb(217, 220, 255);
-            tb_ediapellido.BorderStyle = BorderStyle.None;
-            tb_ediapellido.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tb_ediapellido.BackColor = Color.White;
+            tb_ediapellido.BorderStyle = BorderStyle.FixedSingle;
+            tb_ediapellido.Font = new Font("Segoe UI", 10F);
             tb_ediapellido.Location = new Point(213, 57);
             tb_ediapellido.Name = "tb_ediapellido";
-            tb_ediapellido.Size = new Size(159, 22);
+            tb_ediapellido.Size = new Size(157, 25);
             tb_ediapellido.TabIndex = 18;
             // 
             // tb_edinombre
             // 
             tb_edinombre.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tb_edinombre.BackColor = Color.FromArgb(217, 220, 255);
-            tb_edinombre.BorderStyle = BorderStyle.None;
-            tb_edinombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tb_edinombre.BackColor = Color.White;
+            tb_edinombre.BorderStyle = BorderStyle.FixedSingle;
+            tb_edinombre.Font = new Font("Segoe UI", 10F);
             tb_edinombre.Location = new Point(24, 57);
             tb_edinombre.Name = "tb_edinombre";
-            tb_edinombre.Size = new Size(153, 22);
+            tb_edinombre.Size = new Size(151, 25);
             tb_edinombre.TabIndex = 17;
             // 
             // label8
@@ -278,18 +297,18 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label8.ForeColor = Color.FromArgb(36, 37, 60);
-            label8.Location = new Point(24, 198);
+            label8.Location = new Point(21, 198);
             label8.Name = "label8";
-            label8.Size = new Size(137, 19);
+            label8.Size = new Size(55, 19);
             label8.TabIndex = 5;
-            label8.Text = "Numero Colegiado";
+            label8.Text = "Cedula";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label6.ForeColor = Color.FromArgb(36, 37, 60);
-            label6.Location = new Point(24, 107);
+            label6.Location = new Point(21, 107);
             label6.Name = "label6";
             label6.Size = new Size(67, 19);
             label6.TabIndex = 3;
@@ -300,7 +319,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label5.ForeColor = Color.FromArgb(36, 37, 60);
-            label5.Location = new Point(213, 107);
+            label5.Location = new Point(208, 107);
             label5.Name = "label5";
             label5.Size = new Size(92, 19);
             label5.TabIndex = 2;
@@ -311,7 +330,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(36, 37, 60);
-            label4.Location = new Point(213, 22);
+            label4.Location = new Point(208, 22);
             label4.Name = "label4";
             label4.Size = new Size(72, 19);
             label4.TabIndex = 1;
@@ -322,26 +341,33 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(36, 37, 60);
-            label3.Location = new Point(23, 22);
+            label3.Location = new Point(20, 22);
             label3.Name = "label3";
             label3.Size = new Size(81, 19);
             label3.TabIndex = 0;
             label3.Text = "Nombre(s)";
             // 
-            // bt_cerrar
+            // textBox1
             // 
-            bt_cerrar.BackColor = Color.FromArgb(52, 57, 91);
-            bt_cerrar.FlatAppearance.BorderSize = 0;
-            bt_cerrar.FlatStyle = FlatStyle.Flat;
-            bt_cerrar.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bt_cerrar.ForeColor = Color.White;
-            bt_cerrar.ImageAlign = ContentAlignment.MiddleLeft;
-            bt_cerrar.Location = new Point(344, 7);
-            bt_cerrar.Name = "bt_cerrar";
-            bt_cerrar.Size = new Size(43, 31);
-            bt_cerrar.TabIndex = 30;
-            bt_cerrar.Text = "X";
-            bt_cerrar.UseVisualStyleBackColor = false;
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.BackColor = Color.White;
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Font = new Font("Segoe UI", 10F);
+            textBox1.Location = new Point(211, 237);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(151, 25);
+            textBox1.TabIndex = 31;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label10.ForeColor = Color.FromArgb(36, 37, 60);
+            label10.Location = new Point(206, 198);
+            label10.Name = "label10";
+            label10.Size = new Size(163, 19);
+            label10.TabIndex = 30;
+            label10.Text = "Cedula de Especialidad";
             // 
             // ucMedicoAgregar
             // 
@@ -384,5 +410,7 @@
         private Button button1;
         private Label label9;
         private Button bt_cerrar;
+        private TextBox textBox1;
+        private Label label10;
     }
 }
