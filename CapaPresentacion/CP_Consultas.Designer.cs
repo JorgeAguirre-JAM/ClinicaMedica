@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class CP_Medico
+    partial class CP_Consultas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             tlp_General = new TableLayoutPanel();
             panel_logo = new Panel();
             pb_logo = new PictureBox();
@@ -46,16 +46,25 @@
             bt_paciente = new Button();
             panel_header = new Panel();
             label2 = new Label();
-            tlp_busqueda = new TableLayoutPanel();
-            dgvMedico = new DataGridView();
-            tlp_busquedanav = new TableLayoutPanel();
-            panel_boton = new Panel();
-            button1 = new Button();
-            bt_agregarmedico = new Button();
-            panel_buscador = new Panel();
-            pictureBox2 = new PictureBox();
-            txtBuscar = new TextBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            dgvConsultas = new DataGridView();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            p_datos = new Panel();
+            dateTimePicker3 = new DateTimePicker();
+            label7 = new Label();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label1 = new Label();
+            panel7 = new Panel();
+            button1 = new Button();
             tlp_General.SuspendLayout();
             panel_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pb_logo).BeginInit();
@@ -65,12 +74,12 @@
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel_header.SuspendLayout();
-            tlp_busqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvMedico).BeginInit();
-            tlp_busquedanav.SuspendLayout();
-            panel_boton.SuspendLayout();
-            panel_buscador.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvConsultas).BeginInit();
+            tableLayoutPanel2.SuspendLayout();
+            p_datos.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // tlp_General
@@ -81,7 +90,7 @@
             tlp_General.Controls.Add(panel_logo, 0, 0);
             tlp_General.Controls.Add(panel_nav, 0, 1);
             tlp_General.Controls.Add(panel_header, 1, 0);
-            tlp_General.Controls.Add(tlp_busqueda, 1, 1);
+            tlp_General.Controls.Add(tableLayoutPanel1, 1, 1);
             tlp_General.Dock = DockStyle.Fill;
             tlp_General.Location = new Point(0, 0);
             tlp_General.Name = "tlp_General";
@@ -89,7 +98,7 @@
             tlp_General.RowStyles.Add(new RowStyle(SizeType.Percent, 16.22807F));
             tlp_General.RowStyles.Add(new RowStyle(SizeType.Percent, 83.77193F));
             tlp_General.Size = new Size(1264, 681);
-            tlp_General.TabIndex = 1;
+            tlp_General.TabIndex = 2;
             // 
             // panel_logo
             // 
@@ -116,8 +125,8 @@
             panel_nav.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel_nav.BackColor = Color.FromArgb(36, 37, 60);
             panel_nav.Controls.Add(panel3);
-            panel_nav.Controls.Add(panel2);
             panel_nav.Controls.Add(bt_config);
+            panel_nav.Controls.Add(panel2);
             panel_nav.Controls.Add(bt_usuario);
             panel_nav.Controls.Add(panel5);
             panel_nav.Controls.Add(panel4);
@@ -125,7 +134,6 @@
             panel_nav.Name = "panel_nav";
             panel_nav.Size = new Size(217, 565);
             panel_nav.TabIndex = 1;
-            panel_nav.Paint += panel_nav_Paint;
             // 
             // panel3
             // 
@@ -152,7 +160,6 @@
             bt_consultas.TabIndex = 0;
             bt_consultas.Text = "    Consultas";
             bt_consultas.UseVisualStyleBackColor = false;
-            bt_consultas.Click += bt_consultas_Click;
             // 
             // panel2
             // 
@@ -188,9 +195,9 @@
             bt_config.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             bt_config.ForeColor = Color.White;
             bt_config.Image = Properties.Resources.config1;
-            bt_config.Location = new Point(17, 506);
+            bt_config.Location = new Point(20, 504);
             bt_config.Name = "bt_config";
-            bt_config.Size = new Size(37, 40);
+            bt_config.Size = new Size(54, 52);
             bt_config.TabIndex = 4;
             bt_config.UseVisualStyleBackColor = true;
             // 
@@ -203,11 +210,12 @@
             bt_usuario.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             bt_usuario.ForeColor = Color.White;
             bt_usuario.Image = Properties.Resources.paciente;
-            bt_usuario.Location = new Point(157, 506);
+            bt_usuario.Location = new Point(147, 504);
             bt_usuario.Name = "bt_usuario";
-            bt_usuario.Size = new Size(37, 40);
+            bt_usuario.Size = new Size(54, 52);
             bt_usuario.TabIndex = 3;
             bt_usuario.UseVisualStyleBackColor = false;
+            bt_usuario.Click += bt_usuario_Click;
             // 
             // panel5
             // 
@@ -260,7 +268,6 @@
             bt_paciente.TabIndex = 0;
             bt_paciente.Text = "     Paciente";
             bt_paciente.UseVisualStyleBackColor = false;
-            bt_paciente.Click += bt_paciente_Click;
             // 
             // panel_header
             // 
@@ -279,179 +286,244 @@
             label2.ForeColor = Color.FromArgb(36, 37, 60);
             label2.Location = new Point(10, 28);
             label2.Name = "label2";
-            label2.Size = new Size(132, 45);
+            label2.Size = new Size(164, 45);
             label2.TabIndex = 2;
-            label2.Text = "Medico";
+            label2.Text = "Consultas";
             // 
-            // tlp_busqueda
+            // tableLayoutPanel1
             // 
-            tlp_busqueda.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            tlp_busqueda.ColumnCount = 2;
-            tlp_busqueda.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tlp_busqueda.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 12F));
-            tlp_busqueda.Controls.Add(dgvMedico, 0, 1);
-            tlp_busqueda.Controls.Add(tlp_busquedanav, 0, 0);
-            tlp_busqueda.Dock = DockStyle.Fill;
-            tlp_busqueda.Location = new Point(226, 113);
-            tlp_busqueda.Name = "tlp_busqueda";
-            tlp_busqueda.RowCount = 2;
-            tlp_busqueda.RowStyles.Add(new RowStyle(SizeType.Percent, 12.8295259F));
-            tlp_busqueda.RowStyles.Add(new RowStyle(SizeType.Percent, 87.17047F));
-            tlp_busqueda.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tlp_busqueda.Size = new Size(1035, 565);
-            tlp_busqueda.TabIndex = 5;
-            tlp_busqueda.Paint += tlp_busqueda_Paint;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(panel1, 0, 1);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
+            tableLayoutPanel1.Location = new Point(226, 113);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 23.4377327F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 76.56226F));
+            tableLayoutPanel1.Size = new Size(1035, 565);
+            tableLayoutPanel1.TabIndex = 5;
             // 
-            // dgvMedico
+            // panel1
             // 
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(224, 224, 224);
-            dgvMedico.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            dgvMedico.BackgroundColor = Color.FromArgb(238, 239, 255);
-            dgvMedico.BorderStyle = BorderStyle.None;
-            dgvMedico.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvMedico.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvMedico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgvMedico.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMedico.Dock = DockStyle.Fill;
-            dgvMedico.EnableHeadersVisualStyles = false;
-            dgvMedico.Location = new Point(10, 82);
-            dgvMedico.Margin = new Padding(9, 8, 9, 8);
-            dgvMedico.Name = "dgvMedico";
-            dgvMedico.ReadOnly = true;
-            dgvMedico.RowHeadersWidth = 51;
-            dgvMedico.Size = new Size(1002, 474);
-            dgvMedico.TabIndex = 1;
-            dgvMedico.CellContentClick += dgvMedico_CellContentClick;
+            panel1.Controls.Add(dgvConsultas);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(3, 135);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1029, 427);
+            panel1.TabIndex = 0;
             // 
-            // tlp_busquedanav
+            // dgvConsultas
             // 
-            tlp_busquedanav.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tlp_busquedanav.ColumnCount = 2;
-            tlp_busquedanav.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tlp_busquedanav.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tlp_busquedanav.Controls.Add(panel_boton, 1, 0);
-            tlp_busquedanav.Controls.Add(panel_buscador, 0, 0);
-            tlp_busquedanav.Location = new Point(4, 4);
-            tlp_busquedanav.Name = "tlp_busquedanav";
-            tlp_busquedanav.RowCount = 1;
-            tlp_busquedanav.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tlp_busquedanav.RowStyles.Add(new RowStyle(SizeType.Absolute, 66F));
-            tlp_busquedanav.Size = new Size(1014, 66);
-            tlp_busquedanav.TabIndex = 0;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(224, 224, 224);
+            dgvConsultas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dgvConsultas.BackgroundColor = Color.FromArgb(238, 239, 255);
+            dgvConsultas.BorderStyle = BorderStyle.None;
+            dgvConsultas.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvConsultas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            dgvConsultas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dgvConsultas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvConsultas.Dock = DockStyle.Fill;
+            dgvConsultas.EnableHeadersVisualStyles = false;
+            dgvConsultas.Location = new Point(0, 0);
+            dgvConsultas.Margin = new Padding(9, 8, 9, 8);
+            dgvConsultas.Name = "dgvConsultas";
+            dgvConsultas.ReadOnly = true;
+            dgvConsultas.RowHeadersWidth = 51;
+            dgvConsultas.Size = new Size(1029, 427);
+            dgvConsultas.TabIndex = 2;
             // 
-            // panel_boton
+            // tableLayoutPanel2
             // 
-            panel_boton.Controls.Add(button1);
-            panel_boton.Controls.Add(bt_agregarmedico);
-            panel_boton.Dock = DockStyle.Fill;
-            panel_boton.Location = new Point(510, 3);
-            panel_boton.Name = "panel_boton";
-            panel_boton.Padding = new Padding(175, 0, 0, 0);
-            panel_boton.Size = new Size(501, 60);
-            panel_boton.TabIndex = 1;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.5471344F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.4528656F));
+            tableLayoutPanel2.Controls.Add(p_datos, 0, 0);
+            tableLayoutPanel2.Controls.Add(panel7, 1, 0);
+            tableLayoutPanel2.Location = new Point(3, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.Size = new Size(1029, 126);
+            tableLayoutPanel2.TabIndex = 1;
+            // 
+            // p_datos
+            // 
+            p_datos.Controls.Add(dateTimePicker3);
+            p_datos.Controls.Add(label7);
+            p_datos.Controls.Add(dateTimePicker2);
+            p_datos.Controls.Add(dateTimePicker1);
+            p_datos.Controls.Add(textBox3);
+            p_datos.Controls.Add(textBox2);
+            p_datos.Controls.Add(textBox1);
+            p_datos.Controls.Add(label6);
+            p_datos.Controls.Add(label5);
+            p_datos.Controls.Add(label4);
+            p_datos.Controls.Add(label3);
+            p_datos.Controls.Add(label1);
+            p_datos.Location = new Point(3, 3);
+            p_datos.Name = "p_datos";
+            p_datos.Size = new Size(545, 120);
+            p_datos.TabIndex = 0;
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Format = DateTimePickerFormat.Short;
+            dateTimePicker3.Location = new Point(160, 90);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(111, 23);
+            dateTimePicker3.TabIndex = 23;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label7.ForeColor = Color.FromArgb(36, 37, 60);
+            label7.Location = new Point(160, 72);
+            label7.Name = "label7";
+            label7.Size = new Size(39, 15);
+            label7.TabIndex = 22;
+            label7.Text = "Fecha";
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Time;
+            dateTimePicker2.Location = new Point(423, 90);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(111, 23);
+            dateTimePicker2.TabIndex = 21;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Time;
+            dateTimePicker1.Location = new Point(291, 90);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(111, 23);
+            dateTimePicker1.TabIndex = 20;
+            // 
+            // textBox3
+            // 
+            textBox3.BorderStyle = BorderStyle.FixedSingle;
+            textBox3.Location = new Point(9, 90);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(134, 23);
+            textBox3.TabIndex = 19;
+            // 
+            // textBox2
+            // 
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Location = new Point(234, 29);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(202, 23);
+            textBox2.TabIndex = 18;
+            // 
+            // textBox1
+            // 
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Location = new Point(9, 29);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(202, 23);
+            textBox1.TabIndex = 17;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(36, 37, 60);
+            label6.Location = new Point(423, 72);
+            label6.Name = "label6";
+            label6.Size = new Size(39, 15);
+            label6.TabIndex = 16;
+            label6.Text = "Salida";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(36, 37, 60);
+            label5.Location = new Point(291, 72);
+            label5.Name = "label5";
+            label5.Size = new Size(49, 15);
+            label5.TabIndex = 15;
+            label5.Text = "Llegada";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(36, 37, 60);
+            label4.Location = new Point(9, 72);
+            label4.Name = "label4";
+            label4.Size = new Size(56, 15);
+            label4.TabIndex = 14;
+            label4.Text = "Telefono";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(36, 37, 60);
+            label3.Location = new Point(234, 11);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 15);
+            label3.TabIndex = 13;
+            label3.Text = "Apellidos";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(36, 37, 60);
+            label1.Location = new Point(9, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(63, 15);
+            label1.TabIndex = 12;
+            label1.Text = "Nombre/s";
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(button1);
+            panel7.Location = new Point(554, 3);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(472, 120);
+            panel7.TabIndex = 1;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(37, 38, 60);
-            button1.Dock = DockStyle.Left;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
             button1.Image = Properties.Resources.agregar1;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(175, 0);
+            button1.Location = new Point(216, 29);
             button1.Margin = new Padding(350, 3, 0, 3);
             button1.Name = "button1";
             button1.Padding = new Padding(25, 0, 0, 0);
             button1.Size = new Size(239, 60);
-            button1.TabIndex = 2;
-            button1.Text = "    Nueva Especialidad";
+            button1.TabIndex = 3;
+            button1.Text = "    Agregar Consulta";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
-            // bt_agregarmedico
-            // 
-            bt_agregarmedico.BackColor = Color.FromArgb(37, 38, 60);
-            bt_agregarmedico.Dock = DockStyle.Right;
-            bt_agregarmedico.FlatAppearance.BorderSize = 0;
-            bt_agregarmedico.FlatStyle = FlatStyle.Flat;
-            bt_agregarmedico.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bt_agregarmedico.ForeColor = Color.White;
-            bt_agregarmedico.Image = Properties.Resources.agregar1;
-            bt_agregarmedico.ImageAlign = ContentAlignment.MiddleLeft;
-            bt_agregarmedico.Location = new Point(262, 0);
-            bt_agregarmedico.Margin = new Padding(35, 3, 35, 3);
-            bt_agregarmedico.Name = "bt_agregarmedico";
-            bt_agregarmedico.Size = new Size(239, 60);
-            bt_agregarmedico.TabIndex = 1;
-            bt_agregarmedico.Text = "    Nuevo Medico";
-            bt_agregarmedico.UseVisualStyleBackColor = false;
-            bt_agregarmedico.Click += bt_agregarmedico_Click;
-            // 
-            // panel_buscador
-            // 
-            panel_buscador.Controls.Add(pictureBox2);
-            panel_buscador.Controls.Add(txtBuscar);
-            panel_buscador.Dock = DockStyle.Fill;
-            panel_buscador.Location = new Point(3, 3);
-            panel_buscador.Name = "panel_buscador";
-            panel_buscador.Size = new Size(501, 60);
-            panel_buscador.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Dock = DockStyle.Left;
-            pictureBox2.Image = Properties.Resources.buscar;
-            pictureBox2.Location = new Point(0, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(54, 60);
-            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox2.TabIndex = 3;
-            pictureBox2.TabStop = false;
-            // 
-            // txtBuscar
-            // 
-            txtBuscar.BackColor = Color.White;
-            txtBuscar.BorderStyle = BorderStyle.FixedSingle;
-            txtBuscar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(78, 13);
-            txtBuscar.Margin = new Padding(3, 2, 3, 2);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(390, 33);
-            txtBuscar.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.Transparent;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(1255, 0);
-            panel1.Margin = new Padding(0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(9, 681);
-            panel1.TabIndex = 5;
-            // 
-            // CP_Medico
+            // CP_Consultas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(248, 249, 255);
             ClientSize = new Size(1264, 681);
-            Controls.Add(panel1);
             Controls.Add(tlp_General);
-            Name = "CP_Medico";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "CP_Medico";
-            WindowState = FormWindowState.Maximized;
-            Load += CP_Medico_Load;
+            Name = "CP_Consultas";
+            Text = "CP_Consultas";
+            Load += CP_Consultas_Load;
             tlp_General.ResumeLayout(false);
             panel_logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pb_logo).EndInit();
@@ -462,13 +534,13 @@
             panel4.ResumeLayout(false);
             panel_header.ResumeLayout(false);
             panel_header.PerformLayout();
-            tlp_busqueda.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvMedico).EndInit();
-            tlp_busquedanav.ResumeLayout(false);
-            panel_boton.ResumeLayout(false);
-            panel_buscador.ResumeLayout(false);
-            panel_buscador.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvConsultas).EndInit();
+            tableLayoutPanel2.ResumeLayout(false);
+            p_datos.ResumeLayout(false);
+            p_datos.PerformLayout();
+            panel7.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -478,27 +550,36 @@
         private Panel panel_logo;
         private PictureBox pb_logo;
         private Panel panel_nav;
+        private Panel panel3;
+        private Button bt_consultas;
+        private Panel panel2;
+        private Button bt_citas;
+        private Button bt_config;
+        private Button bt_usuario;
         private Panel panel5;
         private Button bt_medico;
         private Panel panel4;
         private Button bt_paciente;
         private Panel panel_header;
-        private TableLayoutPanel tlp_busqueda;
-        private Panel panel1;
-        private TableLayoutPanel tlp_busquedanav;
-        private Panel panel_boton;
-        private Button bt_agregarmedico;
-        private Panel panel_buscador;
-        private PictureBox pictureBox2;
-        private TextBox txtBuscar;
-        private DataGridView dgvMedico;
-        private Button bt_config;
-        private Button bt_usuario;
-        private Button button1;
-        private Panel panel3;
-        private Button bt_consultas;
-        private Panel panel2;
-        private Button bt_citas;
         private Label label2;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panel1;
+        private DataGridView dgvConsultas;
+        private TableLayoutPanel tableLayoutPanel2;
+        private Panel p_datos;
+        private DateTimePicker dateTimePicker3;
+        private Label label7;
+        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dateTimePicker1;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label1;
+        private Panel panel7;
+        private Button button1;
     }
 }
